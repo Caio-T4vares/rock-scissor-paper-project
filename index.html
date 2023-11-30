@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock paper scissor game</title>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,11 +14,21 @@
     <h1>Rock, Paper or Scissor</h1>
     <div>
       <div class="container">
-        <img src="./assets/rock.png" alt="Rock" />
-        <img src="./assets/paper-scroll.png" alt="Paper" />
-        <img src="./assets//scissor.png" alt="Scissor" />
+        <button value="rock"><img src="./assets/rock.svg" alt="Rock" /> </button>
+        <button value="paper"><img src="./assets/paper.svg" alt="Paper" /> </button>
+        <button value="scissor"><img src="./assets/scissor.svg" alt="Scissor" /> </button>
       </div>
       <button id="playBtn">Play round</button>
+    </div>
+    <div class="score">
+      <div>
+        <span>Player Score</span>
+        <span class="scores playerScore">0</span>
+      </div>
+      <div>
+        <span>Computer Score</span>
+        <span class="scores computerScore">0</span>
+      </div>
     </div>
   </main>
 </body>

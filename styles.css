@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container button {
+  /* Remover estilos padrão */
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+  background: none;
+  font: inherit;
+  color: inherit;
+  /* Outros estilos personalizados podem ser adicionados aqui */
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+img {
+  width: 100px;
+  height: 100px;
+  padding: 16px;
+}
+#playBtn {
+  display: block;
+  margin: 36px auto;
+}
+h1 {
+  text-align: center;
+}
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.score div {
+  display: flex;
+  flex-direction: column;
+}
+.scores {
+  font-size: 36px;
+  margin-top: 16px;
+  text-align: center;
+}
