@@ -5,67 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock paper scissor game</title>
-  <script>
-    function getComputerChoice() {
-      const choices = ["rock", "paper", "scissor"];
-      return choices[randomChoice()];
-    }
-    function randomChoice() {
-      return Math.floor(Math.random() * 3);
-    }
-    function playRound(computerChoice, playerChoice) {
-      switch (playerChoice) {
-        case 'rock':
-          if (computerChoice == 'rock') {
-            return "Draw"
-          } else if (computerChoice == 'paper') {
-            return "Defeat"
-          } else {
-            return "Win"
-          }
-          break;
-        case 'paper':
-          if (computerChoice == 'paper') {
-            return "Draw"
-          } else if (computerChoice == 'scissor') {
-            return "Defeat"
-          } else {
-            return "Win"
-          }
-          break;
-        case 'scissor':
-          if (computerChoice == 'scissor') {
-            return "Draw"
-          } else if (computerChoice == 'rock') {
-            return "Defeat"
-          } else {
-            return "Win"
-          }
-      }
-    }
-    function game() {
-      let playerWins = 0;
-      let computerWins = 0;
-      for (let i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoice();
-        let playerChoice = prompt("Choose your pick").toLowerCase();
-        let result = playRound(computerChoice, playerChoice);
-        if (result === 'Defeat') {
-          computerWins++;
-        } else if (result == "Win") {
-          playerWins++;
-        }
-      }
-      if (playerWins > computerWins) alert("Congratulations, you are the winner!");
-      else if (playerWins < computerWins) alert("OH NO! You lost the game!");
-      else alert("Draw!!");
-    }
-    game();
-  </script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+  <main>
+    <h1>Rock, Paper or Scissor</h1>
+    <div>
+      <div class="container">
+        <img src="./assets/rock.png" alt="Rock" />
+        <img src="./assets/paper-scroll.png" alt="Paper" />
+        <img src="./assets//scissor.png" alt="Scissor" />
+      </div>
+      <button id="playBtn">Play round</button>
+    </div>
+  </main>
 </body>
 
 </html>
